@@ -1,10 +1,8 @@
 package com.example.controllers;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
-import org.springframework.web.bind.annotation.GetMapping;
+
+
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -20,19 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/productos")
 public class ProoductoController {
 
-    // el metodo siguiente no tiene nada que ver con la api que estamos desarrollando es solo para comprender el formato json.
-
-@GetMapping
-    public List<String> nombres() {
-
-        List<String> nombres = new ArrayList<>();
-        String[] arrayNombres = {
-            "Salwa", "Rachida", "Yolanda", "Patricia", "Maria Jose", "Pili" 
-        };
+   
 
 
-nombres = Arrays.asList(arrayNombres);
-    
-   return nombres; 
-}
 }
