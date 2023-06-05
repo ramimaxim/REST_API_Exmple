@@ -29,7 +29,7 @@ public interface ProductoDao extends JpaRepository<Producto, Integer> {
 
      // el metodo siguiente ademas de paginacion tambien ofrece ordenamiento
      @Query(value = "select p from Producto p left join fetch p.presentacion",
-     countQuery = "select count(p) from Producto p left join p.presentaacion")
+     countQuery = "select count(p) from Producto p left join p.presentacion")
      public Page<Producto> findAll(Pageable pageable);
 
 
