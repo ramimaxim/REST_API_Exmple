@@ -6,6 +6,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.example.dao.ProductoDao;
 import com.example.entities.Producto;
@@ -33,12 +34,15 @@ public class ProductoServiceImpl implements ProductoService{
         return productoDao.findById(id);
     }
 
+
     @Override
+    @Transactional
     public Producto save(Producto producto) {
      return productoDao.save(producto);
     }
 
     @Override
+    @Transactional
     public void delete(Producto producto) {
       productoDao.delete(producto);
     }
